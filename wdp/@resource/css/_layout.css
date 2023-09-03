@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+html	{font-size: 16px;}
+body	{width: 100%; min-width: 360px; line-height: 1.5; color: #000; word-break: break-word;}
+body,
+input,
+select,
+textarea				{font-family: 'Pretendard Variable', 'Poppins', Roboto, "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; letter-spacing: -.03em;}
+
+/*
+	skip-nav
+*/
+.skip-nav	{position: relative; z-index:-2;}
+.skip-nav a	{position: absolute; top: -100vw; left: 0; width:50%; height:2rem; background: #333; color:#fff; text-align: center;}
+.skip-nav a:active,
+.skip-nav a:focus	{top: 0; text-decoration:none; z-index: 1000;}
+
+/*
+	layout
+*/
+body.modal-opened		{overflow: hidden; height:100%; padding-right:4px;}
+#wrap			{}
+#container		{}
+#content		{}
+#header			{height: 100px}
+
+/* header */
+#header.fixed			{position: fixed; top: 0; left: 0; right: 0; color: #000; z-index: 20; background: pink}
+
+#nav ul{
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: center; justify-content: center;
+	-webkit-align-items: center; align-items: center;
+}
+#nav > ul > li + li{padding: 0 8px}
+#nav ul li:not(.current) ul{display:none}
+#nav a {font-weight: 600;}
+#nav .current > a {color: pink}
+#hamburger .line{display: block; margin: 8px auto; width: 50px; height: 5px; background-color: #000;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.opened-nav #header{background: yellow}
+.opened-nav #hamburger {
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition-delay: 0.6s;
+	-o-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.opened-nav #hamburger .line:nth-child(2){width: 0px;}
+.opened-nav #hamburger .line:nth-child(1),
+.opened-nav #hamburger .line:nth-child(3){
+	-webkit-transition-delay: 0.3s;
+	-o-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+.opened-nav #hamburger .line:nth-child(1){
+	-webkit-transform: translateY(13px);
+	-ms-transform: translateY(13px);
+	-o-transform: translateY(13px);
+	transform: translateY(13px);
+}
+.opened-nav #hamburger .line:nth-child(3){
+	-webkit-transform: translateY(-13px) rotate(90deg);
+	-ms-transform: translateY(-13px) rotate(90deg);
+	-o-transform: translateY(-13px) rotate(90deg);
+	transform: translateY(-13px) rotate(90deg);
+}
+
+
+/* nav */
+
+/* footer */
+
+/* popup */
+.overlay	{position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.8); visibility: hidden; opacity: 0; z-index: -1;
+	display: -webkit-flex; display: flex;
+	-webkit-justify-content: center; justify-content: center;
+	-webkit-align-items: center; align-items: center;
+}
+.overlay.active		{visibility: visible; opacity: 1; overflow-y: auto; z-index: 99;}
+.popup			{position: relative; width: 80%; max-width: 600px; height: 80%; max-height: 580px; background-color: #fff; margin: 0 auto;}
+.popup-header		{display: block; padding: .4rem .725rem; border-bottom :1px solid #ddd;}
+.popup-body			{height: calc(100% - 3.7rem - 1px); overflow: hidden auto; padding: 1rem .725rem;}
+.popup .btn-close	{position: absolute; top: .725rem; right: .725rem; width: 2.25rem; height :2.25rem; background-color:#fff;}
+
+
+

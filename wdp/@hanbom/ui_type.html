@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>{PROJECT} WSG &copy;HANBOM</title>
+	<link rel="icon" href="http://pub.hanbom.com/@pub/@resource/images/favi.png" type="image/x-icon"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+
+
+	<!-- jquery -->
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/jquery/jquery-3.2.1.min.js"></script>
+	<!-- Code Box Copy -->
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/prism/prism.min.css" rel="stylesheet">
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/code-box-copy/css/code-box-copy.css" rel="stylesheet">
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/prism/prism.min.js"></script>
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/clipboard/clipboard.min.js"></script>
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/code-box-copy/js/code-box-copy.js"></script>
+	<!-- hanbom pub team -->
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/highlight/monokai-sublime.css" rel="stylesheet">
+
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- hanbom -->
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomWsg.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/hanbomwsg.css">
+
+	<!--[if lt IE 9]>
+		<script src="../resources/lib/html5shiv-master/src/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div id="wrap" class="frame"><!-- #wrap class="frame dashboard" , "login" , "error" ,"frame" -->
+		<header data-include-path="_header_wsg.html"></header>
+		<aside data-include-path="_nav_wsg.html"></aside>
+
+		<div id="container" class="container">
+			<div class="page-title-bar sticky">
+				<h2 class="page-title">TYPOGRAPHY</h2>
+			</div>
+
+			<div id="content" class="content-primary">
+				<div class="box-wrap">
+					<h3 class="box-title">BASE FONT</h3>
+					<iframe class="preview type" src="../@ex/type.html" title="예시화면" style="height:76px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="btns_normal.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exType1" title="Copy"></button>
+						<pre><code class="language-html" id="exType1">&lt;p&gt;
+	{PROJECT}의 본문 스타일을 지정합니다.&lt;br&gt;
+	{PROJECT}의 폰트 패밀리는 &lt;strong class="fw-b fc-000"&gt;Noto Sans KR&lt;/strong&gt;입니다.
+&lt;/p&gt;
+&lt;p&gt;
+	본문의 기본 폰트 사이즈는 16px 줄간격은 &lt;em class="fw-b fc-000"&gt;150%(1.5rem)&lt;/em&gt;, 자간은 &lt;span class="fw-b fc-000"&gt;0&lt;/span&gt;, 컬러는 &lt;strong class="fw-b fc-000"&gt;#555&lt;/strong&gt;입니다.
+&lt;/p&gt;</code></pre>
+					</div>
+				</div>
+
+				<div class="box-wrap mgt-1rem">
+					<h3 class="box-title">TITLE</h3>
+					<iframe class="preview type_h" src="../@ex/type_h.html" title="예시화면" style="height:170px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="btns_normal.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exTypeH1" title="Copy"></button>
+						<pre><code class="language-html" id="exTypeH1">&lt;h1 class="h1"&gt;{PROJECT}의 H1 스타일&lt;/h1&gt;</code></pre>
+					</div>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exTypeH2" title="Copy"></button>
+						<pre><code class="language-html" id="exTypeH2">&lt;h2 class="h2"&gt;{PROJECT}의 H2 스타일을 지정합니다.&lt;/h2&gt;</code></pre>
+					</div>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exTypeH3" title="Copy"></button>
+						<pre><code class="language-html" id="exTypeH3">&lt;h3 class="h3"&gt;{PROJECT}의 H3 스타일을 지정합니다.&lt;/h3&gt;</code></pre>
+					</div>
+				</div>
+
+				<div class="box-wrap mgt-1rem">
+					<h3 class="box-title">Text Align</h3>
+					<iframe class="preview type_h" src="../@ex/type_align.html" title="예시화면" style="height:78px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="btns_normal.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exTypeA1" title="Copy"></button>
+						<pre><code class="language-html" id="exTypeA1">&lt;p class="ta-l"&gt;좌측정렬&lt;/p&gt;</code></pre>
+					</div>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exTypeA2" title="Copy"></button>
+						<pre><code class="language-html" id="exTypeA2">&lt;p class="ta-c"&gt;중앙정렬&lt;/p&gt;</code></pre>
+					</div>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exTypeA3" title="Copy"></button>
+						<pre><code class="language-html" id="exTypeA3">&lt;p class="ta-r"&gt;우측정렬&lt;/p&gt;</code></pre>
+					</div>
+				</div>
+			</div>
+			<!-- //#content -->
+
+			<footer id="footer">
+				<div class="footer-wrap">
+					<p class="copyright">&copy; <a href="http://hanbom.com" title="Gi" target="_blank">HANBOM</a></p>
+				</div>
+			</footer>
+		</div>
+		<!-- //#container -->
+	</div>
+	<!-- // #wrap  -->
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomIn.js"></script>
+	<script>
+		var includeCallback = function(){
+			navToggle();
+			sideNav();
+			navCurrent(3, 1);
+		};
+	</script>
+</body>
+</html>

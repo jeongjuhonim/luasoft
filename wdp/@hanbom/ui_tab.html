@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>{PROJECT} WSG &copy;HANBOM</title>
+	<link rel="icon" href="http://pub.hanbom.com/@pub/@resource/images/favi.png" type="image/x-icon"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+
+
+	<!-- jquery -->
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/jquery/jquery-3.2.1.min.js"></script>
+	<!-- Code Box Copy -->
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/prism/prism.min.css" rel="stylesheet">
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/code-box-copy/css/code-box-copy.css" rel="stylesheet">
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/prism/prism.min.js"></script>
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/clipboard/clipboard.min.js"></script>
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/code-box-copy/js/code-box-copy.js"></script>
+	<!-- hanbom pub team -->
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/highlight/monokai-sublime.css" rel="stylesheet">
+
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- hanbom -->
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomWsg.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/hanbomwsg.css">
+
+	<!--[if lt IE 9]>
+		<script src="../resources/lib/html5shiv-master/src/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div id="wrap" class="frame"><!-- #wrap class="frame dashboard" , "login" , "error" ,"frame" -->
+		<header data-include-path="_header_wsg.html"></header>
+		<aside data-include-path="_nav_wsg.html"></aside>
+
+		<div id="container" class="container">
+			<div class="page-title-bar sticky">
+				<h2 class="page-title">TABS</h2>
+			</div>
+
+			<div id="content" class="content-primary">
+				<div class="box-wrap">
+					<h3 class="box-title">BASIC</h3>
+					<iframe class="preview type" src="../@ex/tabs.html" title="예시화면" style="height:116px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="../@ex/tabs.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exTab1" title="Copy"></button>
+						<pre><code class="language-html" id="exTab1">&lt;ul class="tabs" role="tablist"&gt;
+	&lt;li class="current" role="presentation"&gt;&lt;a href="#tabCon1" aria-controls="tabCon1" aria-selected="true"&gt;탭 1&lt;/a&gt;&lt;/li&gt;
+	&lt;li role="presentation"&gt;&lt;a href="#tabCon2" aria-controls="tabCon2" aria-selected="false"&gt;탭 2&lt;/a&gt;&lt;/li&gt;
+	&lt;li role="presentation"&gt;&lt;a href="#tabCon3" aria-controls="tabCon3" aria-selected="false"&gt;탭 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id="tabCon1" class="tab-content active"&gt;
+	탭 1 컨텐츠
+&lt;/div&gt;
+&lt;div id="tabCon2" class="tab-content"&gt;
+	탭 2 컨텐츠
+&lt;/div&gt;
+&lt;div id="tabCon3" class="tab-content"&gt;
+	탭 3 컨텐츠
+&lt;/div&gt;</code></pre>
+					</div>
+				</div>
+			</div>
+			<!-- //#content -->
+
+			<footer id="footer">
+				<div class="footer-wrap">
+					<p class="copyright">&copy; <a href="http://hanbom.com" title="Gi" target="_blank">HANBOM</a></p>
+				</div>
+			</footer>
+		</div>
+		<!-- //#container -->
+	</div>
+	<!-- // #wrap  -->
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomIn.js"></script>
+	<script>
+		var includeCallback = function(){
+			navToggle();
+			sideNav();
+			navCurrent(3, 5);
+		};
+	</script>
+</body>
+</html>

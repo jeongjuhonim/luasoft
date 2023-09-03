@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<title>{PROJECT}</title>
+<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+<script src="../@resource/js/project.js"></script>
+<link type="text/css" href="../@resource/css/project.css" rel="stylesheet" />
+<link type="text/css" href="http://pub.hanbom.com/@pub/@resource/css/_wsg_ex.css" rel="stylesheet" />
+<style type="text/css">
+    .btn.delete {width: 24px; height: 24px; background: url('../@resource/images/@uio/btn_delete.svg') no-repeat 0 0;}
+    
+</style>
+</head>
+<body>
+    <fieldset class="fieldset check-filter">
+        <div class="field-wrap">
+            <div class="field">
+                <span class="label">타입</span>
+                <div class="insert">
+                    <span class="option">
+                        <input type="checkbox" class="checkbox" name="type" id="typeAll"><label for="typeAll">전체선택</label>
+                    </span>
+                    <span class="option">
+                        <input type="checkbox" class="checkbox" name="type" id="type1"><label for="type1">타입1</label>
+                    </span>
+                    <span class="option">
+                        <input type="checkbox" class="checkbox" name="type" id="type2"><label for="type2">타입2</label>
+                    </span>
+                    <span class="option">
+                        <input type="checkbox" class="checkbox" name="type" id="type3"><label for="type3">타입3</label>
+                    </span>
+                </div>
+            </div>
+            <div class="check-select">
+                <button type="reset" class="btn medium light reset">
+                    초기화
+                </button>
+            </div>
+        </div>
+    </fieldset>
+
+    <script>
+        jQuery(function(){
+            filterChk();
+        });
+    </script>
+</body>
+</html>

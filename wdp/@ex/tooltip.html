@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <title>{PROJECT}</title>
+    <script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+    <script src="../@resource/js/project.js"></script>
+    <link type="text/css" href="../@resource/css/project.css" rel="stylesheet" />
+    <link type="text/css" href="http://pub.hanbom.com/@pub/@resource/css/_wsg_ex.css" rel="stylesheet" />
+    <style>
+        .tooltip {
+            position: relative;
+            display: block;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: help;
+            height: 20px;
+            width: 100%;
+        }
+
+        .tooltip[role="presentation"]:focus {
+            outline: 1px solid #000;
+            border-radius: 2px;
+        }
+
+        .offscreen {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: auto;
+            height: auto;
+            padding: 0.7em;
+            background: #fff;
+            box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 4px 0;
+            cursor: text;
+        }
+
+        .offscreen.open {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="javascript:void(0);" class="tooltip" aria-disabled="true" role="presentation">
+        <span aria-hidden="true" class="text">KE</span>
+        <span role="tooltip" id="toolTip" class="offscreen">대한항공</span>
+    </a>
+
+    <script>
+        jQuery(function () {
+
+
+            // mouseover 이벤트
+            var handlerMouseOver = (evt) => {
+                if (evt.target !== evt.currentTarget) return;
+
+                var tooltipBox = evt.currentTarget.nextElementSibling;
+                var tooltipBoxId = tooltipBox.getAttribute('id');
+                var tooltipText = evt.target;
+
+                if (!tooltipBox.classList.contains("open")) {
+                    tooltipBox.hidden = false;
+                    tooltipBox.setAttribute("tabindex", "0");
+                    tooltipBox.classList.add("open");
+                    tooltipText.setAttribute("aria-describedby", tooltipBoxId);
+                }
+            };
+
+            // mouseout 이벤트
+            var handlerMouseOut = (evt) => {
+                if (evt.target !== evt.currentTarget) return;
+
+                var tooltipBox = evt.currentTarget.nextElementSibling;
+                var tooltipBoxId = tooltipBox.getAttribute('id');
+                var tooltipText = evt.target;
+
+                if (tooltipBox.classList.contains("open")) {
+                    tooltipBox.hidden = true;
+                    tooltipBox.setAttribute("tabindex", "-1");
+                    tooltipBox.classList.remove("open");
+                    tooltipText.removeAttribute("aria-describedby");
+                }
+            };
+
+            //keydown 이벤트(Enter 키)
+            var handlerKeydown = (evt) => {
+                if (evt.key === "Enter") {
+                    event.preventDefault();
+
+                    if (evt.target !== evt.currentTarget) return;
+                    var tooltipBox = evt.currentTarget.querySelector(".offscreen");
+                    var tooltipBoxId = tooltipBox.getAttribute('id');
+                    var tooltipText = evt.currentTarget.querySelector(".text");
+
+                    if (!tooltipBox.classList.contains("open")) {
+                        tooltipBox.hidden = false;
+                        tooltipBox.setAttribute("tabindex", "0");
+                        tooltipBox.classList.add("open");
+                        tooltipText.setAttribute("aria-describedby", tooltipBoxId);
+                    } else {
+                        tooltipBox.hidden = true;
+                        tooltipBox.setAttribute("tabindex", "-1");
+                        tooltipBox.classList.remove("open");
+                        tooltipText.removeAttribute("aria-describedby");
+                    }
+                }
+            };
+
+            // tooltip event 등록
+            (function () {
+                var tooltipText = document.querySelectorAll(".tooltip[role='presentation'] .text");
+                var tooltipLink = document.querySelectorAll(".tooltip[role='presentation']");
+                if (!tooltipText.length) return;
+
+                for (let i = 0; i < tooltipText.length; i++) {
+                    tooltipText
+                    tooltipText[i].addEventListener("mouseover", handlerMouseOver);
+                    tooltipText[i].addEventListener("mouseout", handlerMouseOut);
+                }
+                for (let i = 0; i < tooltipLink.length; i++) {
+                    tooltipLink
+                    tooltipLink[i].addEventListener("keydown", handlerKeydown);
+                }
+            })();
+        });
+    </script>
+</body>
+
+</html>

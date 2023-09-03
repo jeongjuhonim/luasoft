@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover									{text-decoration: none; color: inherit;}
+button 									{-webkit-appearance:none; -moz-appearance: none; appearance: none; 
+	border: 0 none; font-family: inherit; color: inherit;}
+button:focus,
+a:focus									{outline-color: transparent; outline-style: none;}
+.btn 									{display: inline-block; text-align: center; vertical-align: middle; border: 0 none; outline: none; cursor: pointer; background-color: transparent;}
+
+a.btn									{text-decoration: none;}
+input.btn,
+button.btn								{overflow: visible; margin: 0; background-color: transparent;}
+a.btn									{text-decoration: none;}
+
+/* button size */
+.btn.small{}
+.btn.medium{}
+.btn.large{}
+
+/* button color */
+.btn.normal{}
+.btn.normal:hover{}
+.btn.light{}
+.btn.light:hover{}
+.btn.dark{}
+.btn.dark:hover{}
+.btn.bdr{}
+.btn.bdr:hover{}
+
+/* btn disabled */
+.btn[disabled] {}

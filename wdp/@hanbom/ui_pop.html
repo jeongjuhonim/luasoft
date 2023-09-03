@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>{PROJECT} WSG &copy;HANBOM</title>
+	<link rel="icon" href="http://pub.hanbom.com/@pub/@resource/images/favi.png" type="image/x-icon"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+
+
+	<!-- jquery -->
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/jquery/jquery-3.2.1.min.js"></script>
+	<!-- Code Box Copy -->
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/prism/prism.min.css" rel="stylesheet">
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/code-box-copy/css/code-box-copy.css" rel="stylesheet">
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/prism/prism.min.js"></script>
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/clipboard/clipboard.min.js"></script>
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/code-box-copy/js/code-box-copy.js"></script>
+	<!-- hanbom pub team -->
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/highlight/monokai-sublime.css" rel="stylesheet">
+
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- hanbom -->
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomWsg.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/hanbomwsg.css">
+
+	<!--[if lt IE 9]>
+		<script src="../resources/lib/html5shiv-master/src/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div id="wrap" class="frame"><!-- #wrap class="frame dashboard" , "login" , "error" ,"frame" -->
+		<header data-include-path="_header_wsg.html"></header>
+		<aside data-include-path="_nav_wsg.html"></aside>
+
+		<div id="container" class="container">
+			<div class="page-title-bar sticky">
+				<h2 class="page-title">POPUP</h2>
+			</div>
+
+			<div id="content" class="content-primary">
+				<div class="box-wrap">
+					<h3 class="box-title">POPUP</h3>
+					<iframe class="preview type" src="../@ex/pop.html" title="예시화면" style="height:500px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="../@ex/pop.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exPop1" title="Copy"></button>
+						<pre><code class="language-html" id="exPop1">&lt;div id="wrap" class="frame"&gt;
+	&lt;button type="button" class="btn medium normal open-pop" pop-target="#popupId"&gt;팝업열기 버튼&lt;/button&gt;
+&lt;/div&gt;&lt;!-- // #wrap  --&gt;
+
+&lt;div id="popupId" class="overlay"&gt;
+	&lt;div class="popup"&gt;
+		&lt;div class="popup-header"&gt;
+			&lt;h2 class="h3"&gt;팝업제목&lt;/h2&gt;
+			&lt;button type="button" class="btn-close"&gt;&lt;span class="material-icons md-36"&gt;close&lt;/span&gt;&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;div class="popup-body write-form"&gt;
+			팝업내용
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</div>
+				</div>
+
+				<div class="box-wrap mgt-1rem">
+					<h3 class="box-title">웹접근성 POPUP</h3>
+					<iframe class="preview type" src="../@ex/pop_accessibility.html" title="예시화면" style="height:500px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="../@ex/pop_accessibility.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exPop1" title="Copy"></button>
+						<pre><code class="language-html" id="exPop1">&lt;div id="wrap" class="frame"&gt
+	&lt;button type="button" class="btn medium normal open-pop" pop-target="#popupId" aria-controls="popupId" aria-haspopup="true"&gt팝업열기 버튼&lt;/button&gt
+&lt;/div&gt
+&lt;!-- // #wrap  --&gt;
+
+&lt;!-- 레이어 팝업 --&gt;
+&lt;div id="popupId" class="overlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle"&gt;
+    &lt;div class="popup"&gt;
+        &lt;div class="popup-header"&gt;
+            &lt;h2 id="popupTitle" class="h3"&gt;팝업제목&lt;/h2&gt;
+            &lt;button type="button" class="btn-close" aria-label="닫기"&gt;&lt;i class="ico"&gt;&times;&lt;span&gt;close&lt;/span&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;div class="popup-body"&gt;
+            &lt;a href="#"&gt;내용&lt;/a&gt;
+            &lt;span tabindex="0"&gt;내용&lt;/span&gt;
+            &lt;span tabindex="-1"&gt;내용&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</div>
+				</div>
+			</div>
+			<!-- //#content -->
+
+			<footer id="footer">
+				<div class="footer-wrap">
+					<p class="copyright">&copy; <a href="http://hanbom.com" title="Gi" target="_blank">HANBOM</a></p>
+				</div>
+			</footer>
+		</div>
+		<!-- //#container -->
+	</div>
+	<!-- // #wrap  -->
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomIn.js"></script>
+	<script>
+		var includeCallback = function(){
+			navToggle();
+			sideNav();
+			navCurrent(3, 7);
+		};
+	</script>
+</body>
+</html>

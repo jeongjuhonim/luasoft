@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <title>{PROJECT}</title>
+    <script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+    <script src="../@resource/js/project.js"></script>
+    <link type="text/css" href="../@resource/css/project.css" rel="stylesheet" />
+    <link type="text/css" href="http://pub.hanbom.com/@pub/@resource/css/_wsg_ex.css" rel="stylesheet" />
+    <style>
+        a:focus,
+        button:focus,
+        button:focus-visible {
+            outline: 1px solid #000;
+        }
+
+        .popup-body .btn-area {margin: 100px auto 0; text-align: center;}
+        .popup-body .btn-close {position: relative; top: auto; right: auto; width: auto; height: auto;}
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="frame">
+        <button type="button" class="btn medium normal open-pop" aria-controls="popupId" aria-haspopup="true">팝업열기 버튼</button>
+    </div>
+    <!-- // #wrap  -->
+
+    <!-- 레이어 팝업 -->
+    <div id="popupId" class="overlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+        <div class="popup">
+            <div class="popup-header">
+                <h2 id="popupTitle" class="h3">웹접근성 팝업</h2>
+                <button type="button" class="btn-close" aria-label="닫기"><i class="ico">&times;<span>close</span></i></button>
+            </div>
+
+            <div class="popup-body">
+                <ul>
+                    <li>- 레이어가 열리면 레이어 외부 영역을 스크린리더가 읽지 않게 처리</li>
+                    <li>- 레이어가 열리면 focus 받을 수 있는 요소 중 첫번째 요소로 focus 이동</li>
+                    <li>- focus 받을 수 있는 첫번째 요소에서 Shift + Tab키 누르면 마지막 요소로 focus 이동</li>
+                    <li>- 배경(딤드) 클릭시 레이어 닫힘</li>
+                    <li>- Esc키 누르면 레이어 닫힘</li>
+                </ul>
+
+                <div class="btn-area">
+                    <button type="button" class="btn large dark btn-close">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

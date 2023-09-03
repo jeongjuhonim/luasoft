@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<title>{PROJECT}</title>
+<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+<script src="../@resource/js/project.js"></script>
+<link type="text/css" href="../@resource/css/project.css" rel="stylesheet" />
+<link type="text/css" href="http://pub.hanbom.com/@pub/@resource/css/_wsg_ex.css" rel="stylesheet" />
+</head>
+<body>
+	<form class="form">
+		<fieldset class="fieldset">
+			<h2 class="h3">이용약관</h2>
+			<p class="field-txt">필수항목이므로 반드시 입력해 주시기 바랍니다.</p>
+
+			<div class="field">
+				<label class="label" for="joinId">아이디</label>
+				<div class="insert">
+					<input type="text" class="input-text medium" id="joinId">
+					<button type="button" class="btn normal medium">중복확인</button>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="joinPw">비밀번호</label>
+				<div class="insert">
+					<input type="password" class="input-text medium" id="joinPw">
+					<p class="guide-txt">비밀번호는 영문, 숫자, 특수문자가 혼합된 8~20자 이내로 입력해 주세요</p>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="joinPwCon">비밀번호 확인</label>
+				<div class="insert">
+					<input type="password" class="input-text medium" id="joinPwCon">
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="joinName">이름</label>
+				<div class="insert">
+					<input type="text" class="input-text medium" id="joinName" disabled="disabled" value="천송이">
+				</div>
+			</div>
+			<div class="field">
+				<span class="label">휴대전화</span>
+				<div class="insert">
+					<span class="bundle tel">
+						<input type="tel" class="input-text medium" id="tel1" disabled="disabled" value="010">
+						<span class="dash">-</span>
+						<input type="tel" class="input-text medium" id="tel2" disabled="disabled" value="9847">
+						<span class="dash">-</span>
+						<input type="tel" class="input-text medium" id="tel3" disabled="disabled" value="9847">
+					</span>
+				</div>
+			</div>
+			<div class="field">
+				<span class="label">생년월일</span>
+				<div class="insert">
+					<input type="date" class="input-text medium arr" placeholder="생일을 선택해주세요" onfocus="(this.type='date')" value="2019-01-20">
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="emailId">이메일</label>
+				<div class="insert">
+					<span class="bundle email">
+						<input type="text" class="input-text medium" id="emailId">
+						<span class="at">@</span>
+						<input type="text" class="input-text medium" id="emailSite">
+
+						<select class="select medium">
+							<option value="">직접입력</option>
+						</select>
+					</span>
+				</div>
+			</div>
+			<div class="field">
+				<span class="label">성별</span>
+				<div class="insert">
+					<span class="option">
+						<input type="radio" class="radio" name="rd" id="rd1"><label for="rd1">남자</label>
+					</span>
+					<span class="option">
+						<input type="radio" class="radio" name="rd" id="rd2"><label for="rd2">여자</label>
+					</span>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label" for="joinName">파일첨부</label>
+				<div class="insert">
+					<span class="bundle file">
+						<input type="text" id="fileName" class="input-text medium" placeholder="최대 1mb" readonly="">
+						<span class="btn normal medium">
+							<input type="file" name="file" class="file-hidden" onchange="javascript:document.getElementById('fileName').value = this.value">
+							첨부하기
+						</span>
+					</span>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>

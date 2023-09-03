@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<title>{PROJECT}</title>
+<script src="../@resource/js/lib/jquery-3.2.1.min.js"></script>
+<script src="../@resource/js/project.js"></script>
+<link type="text/css" href="../@resource/css/project.css" rel="stylesheet" />
+<link type="text/css" href="http://pub.hanbom.com/@pub/@resource/css/_wsg_ex.css" rel="stylesheet" />
+</head>
+<body>
+
+<ul class="data-list accordion" data-role="accordion-group" accordion-option="toggle">
+	<li role="presentation">
+		<button id="accordionTitle1" class="js-accordion-switche" aria-expanded="false" aria-controls="accordionCont1">
+			아코디언 제목1
+		</button>
+		<div id="accordionCont1" class="js-accordion-content" role="region" aria-labelledby="accordionTitle1">
+			아코디언 내용1<br>
+			accordion(); or accordion(1);
+		</div>
+	</li>
+	<li role="presentation">
+		<button id="accordionTitle2" class="js-accordion-switche" aria-expanded="false" aria-controls="accordionCont2">
+			아코디언 제목2
+		</button>
+		<div id="accordionCont2" class="js-accordion-content" role="region" aria-labelledby="accordionTitle2">
+			아코디언 내용2<br>
+			accordion(); or accordion(1);
+		</div>
+	</li>
+	<li role="presentation">
+		<button id="accordionTitle3" class="js-accordion-switche" aria-expanded="false" aria-controls="accordionCont3">
+			아코디언 제목3
+		</button>
+		<div id="accordionCont3" class="js-accordion-content" role="region" aria-labelledby="accordionTitle3">
+			아코디언 내용3<br>
+			accordion(); or accordion(1);
+		</div>
+	</li>
+</ul>
+<script>
+	jQuery(function(){
+		accordion(1);
+	});
+</script>
+</body>
+</html>

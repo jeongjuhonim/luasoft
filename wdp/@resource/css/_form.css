@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* hanbom.com */
+
+label,
+input,
+select,
+textarea,
+fieldset	{box-sizing: border-box;}
+input,
+select,
+textarea,
+input::-webkit-search-cancel-button,
+input::-webkit-calendar-picker-indicator{
+	appearance:none;
+	-webkit-appearance:none;
+}
+input,
+select,
+textarea {font-size:16px; line-height: 21px; color:#000; background: #fff;
+	outline: none;
+	border:0;
+	border-radius: 0;
+}
+select::-ms-expand 						{display: none;}
+input,
+textarea								{font-size: 14px; caret-color: black;}
+::placeholder							{color: var(--gray);}
+input:focus,
+select:focus,
+textarea:focus							{outline-color: transparent; outline-style: none;}
+input,
+select,
+textarea,
+.label-box,
+.checkbox:before,
+.upload-wrap .upload-file.img			{border-radius: 4px;}
+fieldset								{}
+
+/* select */
+.select									{position: relative; width: 10rem; background: #fff url("../images/@uio/select-arr.svg") no-repeat 100% 50%; background-size: 1.5rem 1.5rem; vertical-align: middle;}
+.select.small							{}
+.select.medium							{}
+.select.large							{}
+.select:disabled						{}
+.select:readonly						{}
+.select:focus							{}
+
+/* input-text */
+.input-text								{}
+.input-text.small						{}
+.input-text.medium						{}
+.input-text.large						{}
+.input-text:disabled					{}
+.input-text:readonly					{}
+.input-text:focus						{}
+.input-text[type="search"]::-webkit-search-cancel-button,
+.input-text[type="date"]::-webkit-clear-button {position: relative; right: .25rem; width: 1.5rem; height: 1.5rem;
+	-webkit-appearance: none; -moz-appearance: none; appearance: none;
+	background: url('../images/@uio/btn_delete.svg') no-repeat 0 0;
+}
+
+/* textarea */
+.textarea								{}
+.textarea:focus  						{}
+.textarea[disabled] 					{}
+
+/* .field */
+.field{}
+.field > .label{}
+

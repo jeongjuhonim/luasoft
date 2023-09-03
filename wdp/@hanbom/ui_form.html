@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>{PROJECT} WSG &copy;HANBOM</title>
+	<link rel="icon" href="http://pub.hanbom.com/@pub/@resource/images/favi.png" type="image/x-icon"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+
+
+	<!-- jquery -->
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/jquery/jquery-3.2.1.min.js"></script>
+	<!-- Code Box Copy -->
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/prism/prism.min.css" rel="stylesheet">
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/code-box-copy/css/code-box-copy.css" rel="stylesheet">
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/prism/prism.min.js"></script>
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/clipboard/clipboard.min.js"></script>
+	<script src="http://pub.hanbom.com/@pub/@resource/libs/code-box-copy/js/code-box-copy.js"></script>
+	<!-- hanbom pub team -->
+	<link href="http://pub.hanbom.com/@pub/@resource/libs/highlight/monokai-sublime.css" rel="stylesheet">
+
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- hanbom -->
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomWsg.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/hanbomwsg.css">
+
+	<!--[if lt IE 9]>
+		<script src="../resources/lib/html5shiv-master/src/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div id="wrap" class="frame"><!-- #wrap class="frame dashboard" , "login" , "error" ,"frame" -->
+		<header data-include-path="_header_wsg.html"></header>
+		<aside data-include-path="_nav_wsg.html"></aside>
+
+		<div id="container" class="container">
+			<div class="page-title-bar sticky">
+				<h2 class="page-title">FORM</h2>
+			</div>
+
+			<div id="content" class="content-primary">
+				<div class="box-wrap">
+					<h3 class="box-title">INPUT</h3>
+					<iframe class="preview" src="../@ex/input_text.html" title="예시화면" style="height:140px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="../@ex/input_text.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exInput1" title="Copy"></button>
+						<pre><code class="language-html" id="exInput1">&lt;input type="text" class="input-text small" placeholder="input.small"&gt;</code></pre>
+					</div>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exInput2" title="Copy"></button>
+						<pre><code class="language-html" id="exInput2">&lt;input type="text" class="input-text medium" placeholder="input.medium"&gt;</code></pre>
+					</div>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exInput3" title="Copy"></button>
+						<pre><code class="language-html" id="exInput3">&lt;input type="text" class="input-text large" placeholder="input.large"&gt;</code></pre>
+					</div>
+				</div>
+
+				<div class="box-wrap mgt-1rem">
+					<h3 class="box-title">SELECT</h3>
+					<iframe class="preview" src="../@ex/input_select.html" title="예시화면" style="height:140px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="../@ex/input_select.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exSelect1" title="Copy"></button>
+						<pre><code class="language-html" id="exSelect1">&lt;select class="select small"&gt;
+	&lt;option&gt;선택&lt;/option&gt;
+	&lt;option&gt;1&lt;/option&gt;
+	&lt;option&gt;2&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+					</div>
+				</div>
+
+				<div class="box-wrap mgt-1rem">
+					<h3 class="box-title">Checkbox </h3>
+					<iframe class="preview" src="../@ex/input_check.html" title="예시화면" style="height:140px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="../@ex/input_check.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exCheck1" title="Copy"></button>
+						<pre><code class="language-html" id="exCheck1">&lt;input type="checkbox" class="checkbox" name="cb" id="cb1"&gt;&lt;label for="cb1"&gt;체크박스&lt;/label&gt;</code></pre>
+					</div>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exCheck2" title="Copy"></button>
+						<pre><code class="language-html" id="exCheck2">&lt;input type="checkbox" class="checkbox" name="cb" id="cb4" disabled checked&gt;&lt;label for="cb4"&gt;체크박스&lt;/label&gt;</code></pre>
+					</div>
+				</div>
+
+				<div class="box-wrap mgt-1rem">
+					<h3 class="box-title">Radio </h3>
+					<iframe class="preview" src="../@ex/input_radio.html" title="예시화면" style="height:140px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="../@ex/input_radio.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exRadio1" title="Copy"></button>
+						<pre><code class="language-html" id="exRadio1">&lt;input type="radio" class="radio" name="rd" id="rd1"&gt;&lt;label for="rd1"&gt;라디오&lt;/label&gt;</code></pre>
+					</div>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exRadio1" title="Copy"></button>
+						<pre><code class="language-html" id="exRadio1">&lt;input type="radio" class="radio" name="rd1" id="rd1_2" disabled checked&gt;&lt;label for="rd2_2"&gt;라디오&lt;/label&gt;</code></pre>
+					</div>
+				</div>
+
+				<div class="box-wrap mgt-1rem">
+					<h3 class="box-title">Textarea</h3>
+					<iframe class="preview" src="../@ex/input_textarea.html" title="예시화면" style="height:120px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="../@ex/input_textarea.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exTextarea1" title="Copy"></button>
+						<pre><code class="language-html" id="exTextarea1">&lt;textarea class="textarea"&gt;&lt;/textarea&gt;
+
+&lt;textarea class="textarea" disabled=""&gt;textarea disabled&lt;/textarea&gt;</code></pre>
+					</div>
+				</div>
+
+				<div class="box-wrap mgt-1rem">
+					<h3 class="box-title">ON/OFF switch</h3>
+					<iframe class="preview" src="../@ex/input_switch.html" title="예시화면" style="height:150px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="../@ex/input_switch.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exSwitch1" title="Copy"></button>
+						<pre><code class="language-html" id="exSwitch1">&lt;span class="onoff small"&gt;
+	&lt;input type="checkbox" name="onoff" class="onoff-checkbox" id="onoffS"&gt;
+	&lt;label class="onoff-label" for="onoffS"&gt;&lt;/label&gt;
+&lt;/span&gt;</code></pre>
+					</div>
+				</div>
+
+				<div class="box-wrap mgt-1rem">
+					<h3 class="box-title">select Group</h3>
+					<iframe class="preview" src="../@ex/input_selectG.html" title="예시화면" style="height:200px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="../@ex/input_selectG.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exSelG1" title="Copy"></button>
+						<pre><code class="language-html" id="exSelG1">&lt;div class="select-group"&gt;
+	&lt;input type="radio" id="group1_s1" name="group1" checked&gt;
+	&lt;label for="group1_s1" class="btn small"&gt;옵션1&lt;/label&gt;
+	&lt;input type="radio" id="group1_s2" name="group1" &gt;
+	&lt;label for="group1_s2" class="btn small"&gt;옵션2&lt;/label&gt;
+	&lt;input type="radio" id="group1_s3" name="group1"&gt;
+	&lt;label for="group1_s3" class="btn small"&gt;옵션3&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+					</div>
+				</div>
+
+				<div class="box-wrap mgt-1rem">
+					<h3 class="box-title">check Filter</h3>
+					<iframe class="preview" src="../@ex/input_checkFilter.html" title="예시화면" style="height:200px;">
+						<p>예시화면이 표시되지 않을 경우 <a href="../@ex/input_checkFilter.html">페이지 이동</a>을 클릭해 주세요.</p>
+					</iframe>
+
+					<div class="code-box-copy">
+						<button class="code-box-copy__btn" data-clipboard-target="#exSelG1" title="Copy"></button>
+						<pre><code class="language-html" id="exSelG1">&lt;fieldset class="fieldset check-filter"&gt;
+	&lt;div class="field-wrap"&gt;
+		&lt;div class="field"&gt;
+			&lt;span class="label"&gt;타입&lt;/span&gt;
+			&lt;div class="insert"&gt;
+				&lt;span class="option"&gt;
+					&lt;input type="checkbox" class="checkbox" name="type" id="typeAll"&gt;&lt;label for="typeAll"&gt;전체선택&lt;/label&gt;
+				&lt;/span&gt;
+				&lt;span class="option"&gt;
+					&lt;input type="checkbox" class="checkbox" name="type" id="type1"&gt;&lt;label for="type1"&gt;타입1&lt;/label&gt;
+				&lt;/span&gt;
+				&lt;span class="option"&gt;
+					&lt;input type="checkbox" class="checkbox" name="type" id="type2"&gt;&lt;label for="type2"&gt;타입2&lt;/label&gt;
+				&lt;/span&gt;
+				&lt;span class="option"&gt;
+					&lt;input type="checkbox" class="checkbox" name="type" id="type3"&gt;&lt;label for="type3"&gt;타입3&lt;/label&gt;
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="check-select"&gt;
+			&lt;button type="reset" class="btn medium light reset"&gt;
+				초기화
+			&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;
+
+&lt;script&gt;
+	jQuery(function(){
+		filterChk();
+	});
+&lt;/script&gt;</code></pre>
+					</div>
+				</div>
+			</div>
+			<!-- //#content -->
+
+			<footer id="footer">
+				<div class="footer-wrap">
+					<p class="copyright">&copy; <a href="http://hanbom.com" title="Gi" target="_blank">HANBOM</a></p>
+				</div>
+			</footer>
+		</div>
+		<!-- //#container -->
+	</div>
+	<!-- // #wrap  -->
+	<script src="http://pub.hanbom.com/@pub/@resource/js/hanbomIn.js"></script>
+	<script>
+		var includeCallback = function(){
+			navToggle();
+			sideNav();
+			navCurrent(3, 3);
+		};
+	</script>
+</body>
+</html>
